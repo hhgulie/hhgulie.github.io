@@ -11,6 +11,8 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+/* Container for floating decorative elements */
 .background-decor {
     position: absolute;
     width: 100%;
@@ -19,6 +21,8 @@ body {
     left: 0;
     pointer-events: none;
 }
+
+/* Styling for decorative floating circles */
 .circle {
     position: absolute;
     width: 150px;
@@ -28,16 +32,22 @@ body {
     filter: blur(30px);
     animation: float 5s infinite alternate ease-in-out;
 }
+
+/* Position and animation speed for the first circle */
 .circle.one {
     top: 10%;
     left: 15%;
     animation-duration: 8s;
 }
+
+/* Position and animation speed for the second circle */
 .circle.two {
     bottom: 15%;
     right: 20%;
     animation-duration: 7s;
 }
+
+/* Keyframe animation to make circles float up and down */
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -46,6 +56,8 @@ body {
         transform: translateY(70px);
     }
 }
+
+/* main content */
 .container {
     max-width: 600px;
     background-color: white;
@@ -77,6 +89,8 @@ ul {
     padding-left: 20px;
     color: #374151;
 }
+
+/* buttons */
 .btn-container {
     margin-top: 24px;
     display: flex;

@@ -9,6 +9,8 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+/* main content */
 .container {
     max-width: 800px;
     background-color: #ebf0f6;
@@ -33,6 +35,8 @@ h1 {
     margin-top: 10px;
     line-height: 1.6;
 }
+
+/* buttons */
 .nav-buttons {
     margin-top: 20px;
     text-align: center;

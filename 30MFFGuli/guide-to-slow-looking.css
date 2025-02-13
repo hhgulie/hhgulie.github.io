@@ -53,7 +53,7 @@ header nav ul li a:hover {
     color: #e0e2e4;
 }
 
-/* Floating Circles for Minimalist Effect */
+/* Floating Circles for calming effect */
 .background-circles {
     position: absolute;
     width: 100%;
@@ -117,6 +117,7 @@ ol li strong {
     color: #1d4ed8;
 }
 
+/* footer section */
 footer {
     background-color: #152444;
     color: #ffffff;
