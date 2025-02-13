@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide to Slow Looking</title>
+    <title>Serenity through Slow Looking</title>
+    <link rel="stylesheet" href="guide-to-slow-looking.css">
 </head>
 <body>
-    
+    <header>
+        <h2>Welcome to the Slow Looking Practice</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Guide to Slow Looking</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="background-circles"></div>
+    </header>
+
+    <!-- Homepage Section -->
+    <main id="home">
+        <section>
+            <h2>What is Slow Looking?</h2>
+            <p>Slow looking is the practice of engaging deeply with what you see, allowing your mind to be fully present in the moment and appreciating the finer details of the world around you. Explore more in the next section!</p>
+        </section>
+    </main>
+
+    <!-- Guide to Slow Looking Section -->
+    <main id="guide">
+        <section>
+            <h2>Welcome to the Guide</h2>
+            <p>Slow looking is all about being present with what you see. To get started, we invite you to watch this short video to deepen your understanding of the practice.</p>
+
+            <!-- Video Embed -->
+            <div>
+                <iframe src="images/Just Another Day - Raghd & Guli (1).mp4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <b>Once you're ready, follow the steps below to begin your slow looking practice:</b>
+            
+            <ol>
+                <li><strong>Choose Your Focus</strong><br>Pick an object, scene, or piece of art to focus on. It can be anything—a flower, a painting, a tree. The idea is to choose something that grabs your attention and invites deeper exploration.</li>
+                <li><strong>Engage with Detail</strong><br>Take a moment to notice the fine details—colors, textures, shapes. Don't rush. Focus on the small things you might normally overlook.</li>
+                <li><strong>Breathe and Pause</strong><br>As you look, take deep, slow breaths. Pause between each breath and let yourself absorb the full experience of the object.</li>
+                <li><strong>Notice Thoughts and Feelings</strong><br>Let any thoughts or emotions that arise come and go without judgment. Focus on the experience of seeing and being present in the moment.</li>
+                <li><strong>Practice Regularly</strong><br>To reap the benefits, make slow looking a part of your routine. Even a few minutes a day can make a big difference in reducing stress and improving your overall sense of well-being.</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>2025 Slow Looking</p>
+    </footer>
+
+    <script>
+        //  animated circles 
+        const backgroundCircles = document.querySelector('.background-circles');
+
+        function createCircle() {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+
+            // Random position and animation duration
+            const size = Math.random() * 50 + 20; 
+            const left = Math.random() * 100; 
+            const duration = Math.random() * 10 + 5; 
+
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.left = `${left}%`;
+            circle.style.animationDuration = `${duration}s`;
+
+            backgroundCircles.appendChild(circle);
+
+            // Remove circle after animation ends
+            setTimeout(() => {
+                circle.remove();
+            }, duration * 1000);
+        }
+
+        setInterval(createCircle, 1000); // Generate a new circle every second
+    </script>
 </body>
 </html>
