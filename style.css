@@ -1,0 +1,221 @@
+/* RESET and BASE STYLES */
+/* Ensures consistent spacing and box model, and sets the default font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* General body styles */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* -------------------------------
+   HEADER SECTION
+--------------------------------*/
+/* Fixed header bar at the top */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  z-index: 999;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Logo styling on the top left */
+.logo {
+  font-size: 2rem;
+  color: white;
+}
+
+/* Navigation link container */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Individual navigation link styling */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.nav-links a:hover {
+  color: #004aad;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button that opens the dropdown */
+.dropbtn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for the dropdown button */
+.dropbtn:hover {
+  color: #004aad;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #004aad;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  text-align: left;
+  left: -4.5rem;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+  color: #004aad;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s ease;
+}
+
+/* Dropdown hover effect */
+.dropdown-content a:hover {
+  background-color: #e6f0ff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add top padding to sections to prevent being hidden under fixed header */
+.pageOne,
+.about-section,
+.pageThree {
+  padding-top: 80px;
+}
+
+/* -------------------------------
+   PAGE ONE: HERO SECTION
+--------------------------------*/
+/* Fullscreen hero background */
+.page-one {
+  background-image: url(media/homePic.png);
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  position: relative;
+}
+
+/* Hero content container */
+.hero {
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 12vh;
+}
+
+/* Main Portfolio heading */
+.hero h1 {
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 10px 10px 3px #1e3a8a, 8px 8px 15px #004aad;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+/* Rotated "2025" year text */
+.hero-year {
+  position: absolute;
+  top: calc(41%);
+  right: 20rem;
+  font-size: 62.5px;
+  font-weight: bold;
+  color: white;
+  transform: rotate(14deg);
+  text-shadow: 4px 4px 0 #1e3a8a, 6px 6px 15px #004aad;
+}
+
+/* Tagline at the bottom of the hero section */
+.bottom-tagline {
+  position: absolute;
+  bottom: 10%;
+  width: 75%;
+  background: linear-gradient(90deg, #20c2c2 0%, #2c5488 100%);
+  text-align: center;
+  padding: 1rem;
+  font-size: 44.6px;
+  border-radius: 60px;
+}
+
+/* -------------------------------
+   PAGE TWO: ABOUT SECTION
+--------------------------------*/
+/* Background and layout */
+.about-section {
+  background-image: url(media/aboutSectionBg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding: 20rem 10rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
+/* Container for text content */
+.about-content {
+  width: 60%;
+}
+
+/* "All About Me" title */
+.about-title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 4px 4px 0 #1e3a8a, 6px 6px 15px #004aad;
+}
+
+/* Quote box styling */
+.quote-box {
+  background-color: white;
+  color: #004aad;
+  border: 10px solid #4599fa;
+  padding: 2rem;
+  border-radius: 2rem;
+  font-style: italic;
+  font-size: 27px;
+  width: 80%;
+  text-align: justify;
+}
