@@ -308,38 +308,27 @@
     background-image: url('media/ThankYouBG.png');
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
     position: relative;
+    padding: 4rem 2rem;
+    background-position: center;
   }
   
-  /* Main thank you message */
+  /* Message in thank-you section */
   .thank-you-message {
     font-size: 7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     color: white;
-    text-align: center;
     margin-bottom: 3rem;
+    text-align: center;
     text-shadow: 5px 6px 3px #1e3a8a, 8px 8px 10px #004aad;
   }
   
-  /* Optional subheading or instructions */
-  .contact-note {
-    font-size: 2rem;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    max-width: 600px;
-  }
-  
-  /* Email form styles */
+  /* Form for email in thank-you section */
   .email-form {
     display: flex;
     flex-direction: column;
@@ -348,7 +337,7 @@
     max-width: 500px;
   }
   
-  /* Inputs and textarea */
+  /* Styling for inputs and textarea */
   .email-form input,
   .email-form textarea {
     padding: 1.2rem;
@@ -357,23 +346,21 @@
     font-size: 1rem;
     width: 100%;
     color: #004aad;
-    background-color: white;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease;
   }
   
   .email-form input::placeholder,
   .email-form textarea::placeholder {
-    color: #062d60;
+    color: #062d60; 
   }
   
+  /* Focused state for form fields */
   .email-form input:focus,
   .email-form textarea:focus {
     border-color: #003070;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 64, 173, 0.2);
   }
   
-  /* Submit button */
+  /* Submit button in email form */
   .email-form button {
     background-color: #004aad;
     color: white;
@@ -381,13 +368,22 @@
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1.1rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
   }
   
   .email-form button:hover {
     background-color: #003070;
-    transform: translateY(-2px);
+  }
+  
+  /* Contact note styling */
+  .contact-note {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.6;
   }
   
