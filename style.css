@@ -12,6 +12,24 @@ body {
   background-color: #f4f4f9;
   color: #333;
 }
+/* Set the default cursor for the whole document */
+body {
+  cursor: none;
+}
+/* Add a "cursor trail" effect */
+.cursor-trail {
+  position: absolute;
+  background-image: url(media/flowerCursor.png); 
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  background-size: cover;
+}
+
+
 
 /* -------------------------------
    HEADER SECTION
