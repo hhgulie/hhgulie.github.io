@@ -1,0 +1,336 @@
+/* -------------------------------
+   PAGE THREE: CV SECTION
+--------------------------------*/
+/* CV Section */
+.cv-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-image: url(media/CVworkExperienceBG.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  .cv-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 51, 51, 0.261);
+    z-index: 1;
+  }
+  
+  .cv-wrapper {
+    text-align: left;
+    max-width: 900px;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .cv-title {
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: rgb(228, 224, 224);
+    text-shadow: 5px 10px 3px #1e3a8a, 8px 8px 20px #004aad;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .cv-entry {
+    margin-bottom: 3rem;
+  }
+  
+  .cv-entry h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .cv-entry p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .cv-entry ul {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    list-style-type: disc;
+  }
+  
+  .cv-entry ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  /* -------------------------------
+   SKILLS SECTION
+--------------------------------*/
+.skills-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('media/CVSkillsBG.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents overflow */
+}
+
+.skills-wrapper {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.skills-title {
+  font-size: 5rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 3rem;
+  text-shadow: 10px 10px 3px #1e3a8a, 8px 8px 15px #004aad;
+}
+
+.skills-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills-column {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 3px #1e3a8a, 3px 3px 3px #004aad;
+  width: 30%;
+  min-width: 250px;
+  flex: 1 1 30%;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.skills-column h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #004aad;
+}
+
+.skills-column p,
+.skills-column ul li {
+  font-size: 1.1rem;
+}
+
+.skills-column ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.4;
+}
+
+.skills-column ul li a {
+  text-decoration: none;
+  line-height: 1.8;
+  color: black;
+  transition: color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.skills-column ul li a:hover {
+  color: #004aad;
+  box-shadow: 0 2px 0 #004aad;
+}
+
+  /* -------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 1024px) {
+  .cv-title,
+  .skills-title {
+    font-size: 4rem;
+  }
+
+  .cv-entry h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-column {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-title,
+  .skills-title {
+    font-size: 3rem;
+  }
+
+  .cv-section,
+  .skills-section {
+    padding: 4rem 1rem;
+  }
+
+  .skills-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-column {
+    width: 90%;
+  }
+
+  .cv-entry h2 {
+    font-size: 1.6rem;
+  }
+
+  .cv-entry p,
+  .cv-entry ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cv-title,
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-column {
+    padding: 1.2rem;
+  }
+
+  .skills-column h2 {
+    font-size: 1.4rem;
+  }
+}
+  
+  /* -------------------------------
+     ACHIEVEMENTS PAGE
+  --------------------------------*/
+/* Achievements Section */
+.achievements {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  background-image: url('media/CVAchievementsBG.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 10rem 5rem;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents overflow */
+}
+
+/* Content inside achievements section */
+.achievements-content {
+  width: 50%;
+  color: white;
+  z-index: 2;
+}
+
+/* Achievements section title */
+.achievements-section {
+  margin-bottom: 2rem;
+}
+
+.achievements-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* List of achievements */
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Individual achievement item */
+.achievement-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #004aad;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 2px solid #004aad;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 1024px) {
+  .achievements {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 3rem;
+  }
+
+  .achievements-content {
+    width: 80%;
+  }
+
+  .achievements-section h2 {
+    font-size: 2rem;
+  }
+
+  .achievement-item {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements {
+    padding: 5rem 2rem;
+  }
+
+  .achievements-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .achievements-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .achievement-item {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements {
+    padding: 4rem 1rem;
+  }
+
+  .achievements-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .achievement-item {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+}
+  
+  
+  

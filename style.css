@@ -68,7 +68,7 @@ body {
 .dropbtn {
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: normal;
   color: white;
   cursor: pointer;
@@ -99,10 +99,11 @@ body {
 /* Dropdown items */
 .dropdown-content a {
   color: #004aad;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   display: block;
   transition: 0.2s ease;
+  font-size: 1.3rem;
 }
 
 /* Dropdown hover effect */
@@ -120,6 +121,33 @@ body {
 .about-section,
 .pageThree {
   padding-top: 80px;
+}
+/* -------------------------------
+   Responsive Header
+--------------------------------*/
+@media (max-width: 1024px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
 }
 
 /* -------------------------------
@@ -151,6 +179,19 @@ body {
   text-shadow: 10px 10px 3px #1e3a8a, 8px 8px 15px #004aad;
   text-align: center;
   margin-top: 8rem;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero .hero-year{
+    font-size: 1.5rem;
+    top: calc(32%);
+    right: 2rem;
+  }
+  .hero .bottom-tagline {
+    font-size: 1.3rem;
+  }
 }
 
 /* Rotated "2025" year text */
@@ -185,11 +226,13 @@ body {
   background-image: url(media/aboutSectionBg.png);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   color: white;
-  padding: 20rem 10rem;
+  padding: 15vh 8vw;
   display: flex;
   justify-content: flex-start;
-  height: 100vh;
+  align-items: center;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -200,7 +243,7 @@ body {
 
 /* "All About Me" title */
 .about-title {
-  font-size: 6rem;
+  font-size: 4vw;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -211,11 +254,54 @@ body {
 .quote-box {
   background-color: white;
   color: #004aad;
-  border: 10px solid #4599fa;
+  border: 0.6rem solid #4599fa;
   padding: 2rem;
   border-radius: 2rem;
   font-style: italic;
-  font-size: 27px;
+  font-size: 1.5rem;
   width: 80%;
   text-align: justify;
+}
+
+/* -------------------------------
+   Responsive Design
+--------------------------------*/
+
+/* Tablet View (768px and below) */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40vh 5vw;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 6vw;
+  }
+
+  .quote-box {
+    font-size: 1.3rem;
+    width: 100%;
+  }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40vh 4vw;
+    
+  }
+
+  .about-title {
+    font-size: 8vw;
+  }
+
+  .quote-box {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
 }
