@@ -273,19 +273,44 @@
     text-shadow: 5px 6px 3px #1e3a8a, 8px 8px 10px #004aad;
   }
   
-  .email-button {
-    display: inline-block;
-    background-color: #004aad;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .email-button:hover {
-    background-color: #003070;
-  }
-  
+/* --------------------------------------
+   Styling for the visible email text
+--------------------------------------- */
+.plain-email {
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 74, 173, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+.plain-email span {
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+/* --------------------------------------
+   Styling for the copy button
+--------------------------------------- */
+.copy-button {
+  background-color: #004aad;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #02234f;
+}
+
+.copy-button:focus {
+  outline: none;
+}
