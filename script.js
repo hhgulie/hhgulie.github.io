@@ -1,31 +1,22 @@
-// Select the form and elements
-const form = document.querySelector('form');
-const confirmationMessage = document.createElement('div');
-confirmationMessage.style.color = 'green';
-confirmationMessage.style.textAlign = 'center';
-confirmationMessage.textContent = 'Your message has been sent! Thank you!';
+// JavaScript to handle form validation and confirmation message
+document.querySelector('.email-form').addEventListener('submit', function (e) {
+  // Prevent form submission so we can validate it first
+  e.preventDefault();
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); // Prevent the form from submitting normally
+  // Get the form inputs
+  const nameInput = document.querySelector('input[name="name"]');
+  const emailInput = document.querySelector('input[name="email"]');
+  const messageInput = document.querySelector('textarea[name="message"]');
+  
+  // Validate that all fields are filled
+  if (!nameInput.value || !emailInput.value || !messageInput.value) {
+    alert('Please fill out all fields before submitting.');
+    return; // Stop submission if any field is empty
+  }
 
-  // Send the form data to Formspree
-  const formData = new FormData(form);
+  // If everything is filled out, submit the form (trigger the email client)
+  this.submit();
 
-  fetch(form.action, {
-    method: 'POST',
-    body: formData
-  })
-    .then(response => {
-      if (response.ok) {
-        // Append confirmation message
-        form.reset(); // Clear the form fields
-        form.appendChild(confirmationMessage); // Show success message
-      } else {
-        throw new Error('There was an error with the submission.');
-      }
-    })
-    .catch(error => {
-      console.error('Form submission error:', error);
-      alert('Oops, something went wrong! Please try again.');
-    });
+  // Show a confirmation message (optional)
+  alert('Your message is being sent. Thank you!');
 });
